@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:62178/CadastroPessoa.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" />
+  <xs:element name="SetCNPJFranquia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCNPJFranquiaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetLoginResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterTitular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="valorPesquisa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoPesquisa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterTitularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterTitularResult" nillable="true" type="q1:ArrayOfTitularEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirClienteCartaoTitular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="cliente" nillable="true" type="q2:TitularEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirClienteCartaoTitularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncluirClienteCartaoTitularResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarClienteDadosTitular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="cliente" nillable="true" type="q3:TitularEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarClienteDadosTitularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AtualizarClienteDadosTitularResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirCartaoTitular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="cartaoProduto" nillable="true" type="q4:ContaProdutoEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirCartaoTitularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncluirCartaoTitularResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterCartaoResult" nillable="true" type="q5:CartaoEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartaoAdicional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codAdicional" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartaoAdicionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterCartaoAdicionalResult" nillable="true" type="q6:AdicionalEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarCartaoAdicional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="cartaoAdicional" nillable="true" type="q7:AdicionalEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarCartaoAdicionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AtualizarCartaoAdicionalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirCartaoAdicional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="cartaoAdicional" nillable="true" type="q8:AdicionalEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirCartaoAdicionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncluirCartaoAdicionalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarLimites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="contaCliente" nillable="true" type="q9:ContaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarLimitesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AtualizarLimitesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaBanco">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaBancoResult" nillable="true" type="q10:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaBandeira">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaBandeiraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaBandeiraResult" nillable="true" type="q11:ArrayOfBandeiraEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaProduto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codBandeira" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaProdutoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaProdutoResult" nillable="true" type="q12:ArrayOfProdutoEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosLimiteProduto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codConta" type="xs:int" />
+        <xs:element minOccurs="0" name="codProduto" type="xs:int" />
+        <xs:element minOccurs="0" name="codAdicional" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosLimiteProdutoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterDadosLimiteProdutoResult" nillable="true" type="q13:ArrayOfLimiteEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaGrupoTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codProduto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaGrupoTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaGrupoTarifaResult" nillable="true" type="q14:ArrayOfGrupoTarifaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosGrupoTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codGrupoTarifa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosGrupoTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterDadosGrupoTarifaResult" nillable="true" type="q15:ArrayOfTarifaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosVencimentoFatura">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosVencimentoFaturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterDadosVencimentoFaturaResult" nillable="true" type="q16:ArrayOfVencimentoEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterVencimentoEmissor">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterVencimentoEmissorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterVencimentoEmissorResult" nillable="true" type="q17:EmissorEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoCartao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoCartaoResult" nillable="true" type="q18:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaStatusCartao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaStatusCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaStatusCartaoResult" nillable="true" type="q19:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoBloqueioCartao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoBloqueioCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoBloqueioCartaoResult" nillable="true" type="q20:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoParentesco">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoParentescoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoParentescoResult" nillable="true" type="q21:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaEstadoCivil">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaEstadoCivilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaEstadoCivilResult" nillable="true" type="q22:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaEscolaridade">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaEscolaridadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaEscolaridadeResult" nillable="true" type="q23:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaProfissao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaProfissaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaProfissaoResult" nillable="true" type="q24:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoEndereco">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoEnderecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoEnderecoResult" nillable="true" type="q25:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoEmpresa">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoEmpresaResult" nillable="true" type="q26:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoTelefone">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoTelefoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoTelefoneResult" nillable="true" type="q27:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoResponsavel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaTipoResponsavelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaTipoResponsavelResult" nillable="true" type="q28:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaMotivo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaMotivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaMotivoResult" nillable="true" type="q29:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaMotivoStatusCartao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codStatusCartao" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterListaMotivoStatusCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterListaMotivoStatusCartaoResult" nillable="true" type="q30:ArrayOfListaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarSolicitarSegundaVia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+        <xs:element minOccurs="0" name="codMotivo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarSolicitarSegundaViaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarSolicitarSegundaViaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarAtualizarMotivoStatusCartao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+        <xs:element minOccurs="0" name="codMotivoStatusCartao" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarAtualizarMotivoStatusCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarAtualizarMotivoStatusCartaoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarSegundaVia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+        <xs:element minOccurs="0" name="codMotivo" type="xs:int" />
+        <xs:element minOccurs="0" name="nomeCartao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarSegundaViaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarSegundaViaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMotivoStatusCartao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+        <xs:element minOccurs="0" name="codMotivoStatusCartao" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AtualizarMotivoStatusCartaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AtualizarMotivoStatusCartaoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarNovaSenha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCartao" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarNovaSenhaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarNovaSenhaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TitularExiste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cpf_cnpj" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TitularExisteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TitularExisteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmailExiste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmailExisteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmailExisteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterProposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="valorPesquisa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoPesquisa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterPropostaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" minOccurs="0" name="ObterPropostaResult" nillable="true" type="q31:ArrayOfPropostaEnt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

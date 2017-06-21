@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01f59a39-c7f8-4520-931c-45b8c3adad46" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62178/CadastroPessoa.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CadastroPessoa1.disco" MetadataType="Disco" ID="e45fdbde-38bf-4b36-ad5e-bd0f3230002e" SourceId="1" SourceUrl="http://localhost:62178/CadastroPessoa.svc?disco" />
+    <MetadataFile FileName="CadastroPessoa1.wsdl" MetadataType="Wsdl" ID="288552c5-5bea-4ae2-8386-d7cc9468b32f" SourceId="1" SourceUrl="http://localhost:62178/CadastroPessoa.svc?wsdl" />
+    <MetadataFile FileName="CadastroPessoa1.xsd" MetadataType="Schema" ID="b9a47436-7386-43f3-aed1-8a94cb58a2f6" SourceId="1" SourceUrl="http://localhost:62178/CadastroPessoa.svc?xsd=xsd1" />
+    <MetadataFile FileName="CadastroPessoa12.xsd" MetadataType="Schema" ID="48b76d05-dd92-441c-813e-52c2109e7fdd" SourceId="1" SourceUrl="http://localhost:62178/CadastroPessoa.svc?xsd=xsd0" />
+    <MetadataFile FileName="CadastroPessoa13.xsd" MetadataType="Schema" ID="d4638acc-43d4-4a07-9230-4e895cea8bb2" SourceId="1" SourceUrl="http://localhost:62178/CadastroPessoa.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

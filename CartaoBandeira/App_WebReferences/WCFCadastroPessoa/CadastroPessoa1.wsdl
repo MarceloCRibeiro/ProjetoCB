@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CadastroPessoa" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62178/CadastroPessoa.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62178/CadastroPessoa.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62178/CadastroPessoa.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFCadastroPessoa.Entidade" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICadastroPessoa_SetCNPJFranquia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCNPJFranquia" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SetCNPJFranquia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCNPJFranquiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SetLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLogin" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SetLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterTitular_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterTitular" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterTitular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterTitularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirClienteCartaoTitular_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirClienteCartaoTitular" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirClienteCartaoTitular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirClienteCartaoTitularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarClienteDadosTitular_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarClienteDadosTitular" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarClienteDadosTitular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarClienteDadosTitularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirCartaoTitular_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoTitular" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirCartaoTitular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoTitularResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterCartaoAdicional_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterCartaoAdicional" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterCartaoAdicional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterCartaoAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarCartaoAdicional_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarCartaoAdicional" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarCartaoAdicional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarCartaoAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirCartaoAdicional_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoAdicional" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_IncluirCartaoAdicional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarLimites_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarLimites" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarLimites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarLimitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaBanco" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaBandeira_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaBandeira" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaBandeira_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaBandeiraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaProduto" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosLimiteProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosLimiteProduto" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosLimiteProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosLimiteProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaGrupoTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaGrupoTarifa" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaGrupoTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaGrupoTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosGrupoTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosGrupoTarifa" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosGrupoTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosGrupoTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosVencimentoFatura_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosVencimentoFatura" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterDadosVencimentoFatura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterDadosVencimentoFaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterVencimentoEmissor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterVencimentoEmissor" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterVencimentoEmissor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterVencimentoEmissorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaStatusCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaStatusCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaStatusCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaStatusCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoBloqueioCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoBloqueioCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoBloqueioCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoBloqueioCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoParentesco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoParentesco" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoParentesco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoParentescoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaEstadoCivil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaEstadoCivil" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaEstadoCivil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaEstadoCivilResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaEscolaridade_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaEscolaridade" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaEscolaridade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaEscolaridadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaProfissao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaProfissao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaProfissao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaProfissaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoEndereco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoEndereco" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoEndereco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoTelefone_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoTelefone" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoTelefone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoTelefoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoResponsavel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoResponsavel" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaTipoResponsavel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaTipoResponsavelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaMotivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaMotivo" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaMotivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaMotivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaMotivoStatusCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaMotivoStatusCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterListaMotivoStatusCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterListaMotivoStatusCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_VerificarSolicitarSegundaVia_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarSolicitarSegundaVia" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_VerificarSolicitarSegundaVia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarSolicitarSegundaViaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_VerificarAtualizarMotivoStatusCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarAtualizarMotivoStatusCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_VerificarAtualizarMotivoStatusCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarAtualizarMotivoStatusCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SolicitarSegundaVia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarSegundaVia" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SolicitarSegundaVia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarSegundaViaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarMotivoStatusCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMotivoStatusCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_AtualizarMotivoStatusCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AtualizarMotivoStatusCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SolicitarNovaSenha_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarNovaSenha" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_SolicitarNovaSenha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarNovaSenhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_TitularExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:TitularExiste" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_TitularExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TitularExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_EmailExiste_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmailExiste" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_EmailExiste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmailExisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterProposta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObterProposta" />
+  </wsdl:message>
+  <wsdl:message name="ICadastroPessoa_ObterProposta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObterPropostaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICadastroPessoa">
+    <wsdl:operation name="SetCNPJFranquia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/SetCNPJFranquia" message="tns:ICadastroPessoa_SetCNPJFranquia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/SetCNPJFranquiaResponse" message="tns:ICadastroPessoa_SetCNPJFranquia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/SetLogin" message="tns:ICadastroPessoa_SetLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/SetLoginResponse" message="tns:ICadastroPessoa_SetLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterTitular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterTitular" message="tns:ICadastroPessoa_ObterTitular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterTitularResponse" message="tns:ICadastroPessoa_ObterTitular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirClienteCartaoTitular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirClienteCartaoTitular" message="tns:ICadastroPessoa_IncluirClienteCartaoTitular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirClienteCartaoTitularResponse" message="tns:ICadastroPessoa_IncluirClienteCartaoTitular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarClienteDadosTitular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarClienteDadosTitular" message="tns:ICadastroPessoa_AtualizarClienteDadosTitular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarClienteDadosTitularResponse" message="tns:ICadastroPessoa_AtualizarClienteDadosTitular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoTitular">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirCartaoTitular" message="tns:ICadastroPessoa_IncluirCartaoTitular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirCartaoTitularResponse" message="tns:ICadastroPessoa_IncluirCartaoTitular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterCartao" message="tns:ICadastroPessoa_ObterCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterCartaoResponse" message="tns:ICadastroPessoa_ObterCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterCartaoAdicional">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterCartaoAdicional" message="tns:ICadastroPessoa_ObterCartaoAdicional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterCartaoAdicionalResponse" message="tns:ICadastroPessoa_ObterCartaoAdicional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarCartaoAdicional">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarCartaoAdicional" message="tns:ICadastroPessoa_AtualizarCartaoAdicional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarCartaoAdicionalResponse" message="tns:ICadastroPessoa_AtualizarCartaoAdicional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoAdicional">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirCartaoAdicional" message="tns:ICadastroPessoa_IncluirCartaoAdicional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/IncluirCartaoAdicionalResponse" message="tns:ICadastroPessoa_IncluirCartaoAdicional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarLimites">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarLimites" message="tns:ICadastroPessoa_AtualizarLimites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarLimitesResponse" message="tns:ICadastroPessoa_AtualizarLimites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaBanco" message="tns:ICadastroPessoa_ObterListaBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaBancoResponse" message="tns:ICadastroPessoa_ObterListaBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaBandeira">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaBandeira" message="tns:ICadastroPessoa_ObterListaBandeira_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaBandeiraResponse" message="tns:ICadastroPessoa_ObterListaBandeira_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaProduto" message="tns:ICadastroPessoa_ObterListaProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaProdutoResponse" message="tns:ICadastroPessoa_ObterListaProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosLimiteProduto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosLimiteProduto" message="tns:ICadastroPessoa_ObterDadosLimiteProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosLimiteProdutoResponse" message="tns:ICadastroPessoa_ObterDadosLimiteProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaGrupoTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaGrupoTarifa" message="tns:ICadastroPessoa_ObterListaGrupoTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaGrupoTarifaResponse" message="tns:ICadastroPessoa_ObterListaGrupoTarifa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosGrupoTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosGrupoTarifa" message="tns:ICadastroPessoa_ObterDadosGrupoTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosGrupoTarifaResponse" message="tns:ICadastroPessoa_ObterDadosGrupoTarifa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosVencimentoFatura">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosVencimentoFatura" message="tns:ICadastroPessoa_ObterDadosVencimentoFatura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterDadosVencimentoFaturaResponse" message="tns:ICadastroPessoa_ObterDadosVencimentoFatura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterVencimentoEmissor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterVencimentoEmissor" message="tns:ICadastroPessoa_ObterVencimentoEmissor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterVencimentoEmissorResponse" message="tns:ICadastroPessoa_ObterVencimentoEmissor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoCartao" message="tns:ICadastroPessoa_ObterListaTipoCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoCartaoResponse" message="tns:ICadastroPessoa_ObterListaTipoCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaStatusCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaStatusCartao" message="tns:ICadastroPessoa_ObterListaStatusCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaStatusCartaoResponse" message="tns:ICadastroPessoa_ObterListaStatusCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoBloqueioCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoBloqueioCartao" message="tns:ICadastroPessoa_ObterListaTipoBloqueioCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoBloqueioCartaoResponse" message="tns:ICadastroPessoa_ObterListaTipoBloqueioCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoParentesco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoParentesco" message="tns:ICadastroPessoa_ObterListaTipoParentesco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoParentescoResponse" message="tns:ICadastroPessoa_ObterListaTipoParentesco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaEstadoCivil">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaEstadoCivil" message="tns:ICadastroPessoa_ObterListaEstadoCivil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaEstadoCivilResponse" message="tns:ICadastroPessoa_ObterListaEstadoCivil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaEscolaridade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaEscolaridade" message="tns:ICadastroPessoa_ObterListaEscolaridade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaEscolaridadeResponse" message="tns:ICadastroPessoa_ObterListaEscolaridade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaProfissao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaProfissao" message="tns:ICadastroPessoa_ObterListaProfissao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaProfissaoResponse" message="tns:ICadastroPessoa_ObterListaProfissao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoEndereco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoEndereco" message="tns:ICadastroPessoa_ObterListaTipoEndereco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoEnderecoResponse" message="tns:ICadastroPessoa_ObterListaTipoEndereco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoEmpresa" message="tns:ICadastroPessoa_ObterListaTipoEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoEmpresaResponse" message="tns:ICadastroPessoa_ObterListaTipoEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoTelefone">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoTelefone" message="tns:ICadastroPessoa_ObterListaTipoTelefone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoTelefoneResponse" message="tns:ICadastroPessoa_ObterListaTipoTelefone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoResponsavel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoResponsavel" message="tns:ICadastroPessoa_ObterListaTipoResponsavel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaTipoResponsavelResponse" message="tns:ICadastroPessoa_ObterListaTipoResponsavel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaMotivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaMotivo" message="tns:ICadastroPessoa_ObterListaMotivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaMotivoResponse" message="tns:ICadastroPessoa_ObterListaMotivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaMotivoStatusCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaMotivoStatusCartao" message="tns:ICadastroPessoa_ObterListaMotivoStatusCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterListaMotivoStatusCartaoResponse" message="tns:ICadastroPessoa_ObterListaMotivoStatusCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarSolicitarSegundaVia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/VerificarSolicitarSegundaVia" message="tns:ICadastroPessoa_VerificarSolicitarSegundaVia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/VerificarSolicitarSegundaViaResponse" message="tns:ICadastroPessoa_VerificarSolicitarSegundaVia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarAtualizarMotivoStatusCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/VerificarAtualizarMotivoStatusCartao" message="tns:ICadastroPessoa_VerificarAtualizarMotivoStatusCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/VerificarAtualizarMotivoStatusCartaoResponse" message="tns:ICadastroPessoa_VerificarAtualizarMotivoStatusCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarSegundaVia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/SolicitarSegundaVia" message="tns:ICadastroPessoa_SolicitarSegundaVia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/SolicitarSegundaViaResponse" message="tns:ICadastroPessoa_SolicitarSegundaVia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMotivoStatusCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarMotivoStatusCartao" message="tns:ICadastroPessoa_AtualizarMotivoStatusCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/AtualizarMotivoStatusCartaoResponse" message="tns:ICadastroPessoa_AtualizarMotivoStatusCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarNovaSenha">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/SolicitarNovaSenha" message="tns:ICadastroPessoa_SolicitarNovaSenha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/SolicitarNovaSenhaResponse" message="tns:ICadastroPessoa_SolicitarNovaSenha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TitularExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/TitularExiste" message="tns:ICadastroPessoa_TitularExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/TitularExisteResponse" message="tns:ICadastroPessoa_TitularExiste_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailExiste">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/EmailExiste" message="tns:ICadastroPessoa_EmailExiste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/EmailExisteResponse" message="tns:ICadastroPessoa_EmailExiste_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterProposta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterProposta" message="tns:ICadastroPessoa_ObterProposta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICadastroPessoa/ObterPropostaResponse" message="tns:ICadastroPessoa_ObterProposta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICadastroPessoa" type="tns:ICadastroPessoa">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetCNPJFranquia">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/SetCNPJFranquia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLogin">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/SetLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTitular">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterTitular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirClienteCartaoTitular">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/IncluirClienteCartaoTitular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarClienteDadosTitular">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/AtualizarClienteDadosTitular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoTitular">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/IncluirCartaoTitular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterCartaoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterCartaoAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarCartaoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/AtualizarCartaoAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/IncluirCartaoAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarLimites">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/AtualizarLimites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaBanco">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaBandeira">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaBandeira" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaProduto">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosLimiteProduto">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterDadosLimiteProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaGrupoTarifa">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaGrupoTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosGrupoTarifa">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterDadosGrupoTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterDadosVencimentoFatura">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterDadosVencimentoFatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterVencimentoEmissor">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterVencimentoEmissor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaStatusCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaStatusCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoBloqueioCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoBloqueioCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoParentesco">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoParentesco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaEstadoCivil">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaEstadoCivil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaEscolaridade">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaEscolaridade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaProfissao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaProfissao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoEndereco">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoTelefone">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoTelefone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaTipoResponsavel">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaTipoResponsavel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaMotivo">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaMotivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaMotivoStatusCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterListaMotivoStatusCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarSolicitarSegundaVia">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/VerificarSolicitarSegundaVia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarAtualizarMotivoStatusCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/VerificarAtualizarMotivoStatusCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarSegundaVia">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/SolicitarSegundaVia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMotivoStatusCartao">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/AtualizarMotivoStatusCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarNovaSenha">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/SolicitarNovaSenha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TitularExiste">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/TitularExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailExiste">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/EmailExiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterProposta">
+      <soap:operation soapAction="http://tempuri.org/ICadastroPessoa/ObterProposta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CadastroPessoa">
+    <wsdl:port name="BasicHttpBinding_ICadastroPessoa" binding="tns:BasicHttpBinding_ICadastroPessoa">
+      <soap:address location="http://localhost:62178/CadastroPessoa.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

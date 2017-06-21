@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFCadastroPessoa", "..\WCFCadastroPessoa\WCFCadastroPessoa\WCFCadastroPessoa.csproj", "{09557EAF-AD88-48DC-8F73-26A56145A27F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CartaoBandeira", ".", "{D8826217-1846-423E-A62F-D0661F331910}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/CartaoBandeira"
+		Debug.AspNetCompiler.PhysicalPath = "..\CartaoBandeira\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CartaoBandeira\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/CartaoBandeira"
+		Release.AspNetCompiler.PhysicalPath = "..\CartaoBandeira\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CartaoBandeira\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54142"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{09557EAF-AD88-48DC-8F73-26A56145A27F} = {09557EAF-AD88-48DC-8F73-26A56145A27F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09557EAF-AD88-48DC-8F73-26A56145A27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09557EAF-AD88-48DC-8F73-26A56145A27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09557EAF-AD88-48DC-8F73-26A56145A27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09557EAF-AD88-48DC-8F73-26A56145A27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8826217-1846-423E-A62F-D0661F331910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8826217-1846-423E-A62F-D0661F331910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8826217-1846-423E-A62F-D0661F331910}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8826217-1846-423E-A62F-D0661F331910}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
